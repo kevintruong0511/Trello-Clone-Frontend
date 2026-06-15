@@ -110,8 +110,8 @@ export const DashboardPage = () => {
     <Box sx={{ display: "flex", maxWidth: 1280, mx: "auto", gap: "24px", px: "16px", py: "32px" }}>
       <Box sx={{ width: 240, flexShrink: 0, display: { xs: "none", md: "block" } }}>
         <Stack spacing="2px">
-          <SidebarItem label="Boards" to="/" selected icon="🗂" />
-          <SidebarItem label="Home" to="/" icon="🏠" />
+          <SidebarItem label="Boards" to="/boards" selected icon="🗂" />
+          <SidebarItem label="Home" to="/boards" icon="🏠" />
         </Stack>
         <Typography
           variant="caption"

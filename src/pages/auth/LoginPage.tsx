@@ -18,7 +18,7 @@ export const LoginPage = () => {
     setLoading(true);
     try {
       await login(email, password);
-      navigate("/");
+      navigate("/boards");
     } catch (err: any) {
       setError(apiErrorMessage(err, "Login failed"));
     } finally {

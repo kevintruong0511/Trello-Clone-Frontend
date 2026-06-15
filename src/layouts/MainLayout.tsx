@@ -30,7 +30,7 @@ export const MainLayout = () => {
         <Toolbar sx={{ gap: "8px" }}>
           <Typography
             component={RouterLink}
-            to="/"
+            to="/boards"
             sx={{
               textDecoration: "none",
               color: trello.text,
@@ -60,7 +60,7 @@ export const MainLayout = () => {
             </Box>
             Trello
           </Typography>
-          <Button component={RouterLink} to="/" sx={navButtonSx}>
+          <Button component={RouterLink} to="/boards" sx={navButtonSx}>
             Boards
           </Button>
           {hasRole("admin") && (
@@ -87,7 +87,7 @@ export const MainLayout = () => {
             />
           </Box>
 
-          <Button variant="contained" onClick={() => navigate("/?create=1")}>
+          <Button variant="contained" onClick={() => navigate("/boards?create=1")}>
             Create
           </Button>
           <Avatar

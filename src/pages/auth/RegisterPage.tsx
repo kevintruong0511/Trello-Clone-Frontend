@@ -19,7 +19,7 @@ export const RegisterPage = () => {
     setLoading(true);
     try {
       await register(name, email, password);
-      navigate("/");
+      navigate("/boards");
     } catch (err: any) {
       setError(apiErrorMessage(err, "Registration failed"));
     } finally {

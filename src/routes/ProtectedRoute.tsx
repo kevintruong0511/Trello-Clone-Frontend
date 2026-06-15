@@ -17,5 +17,5 @@ export const ProtectedRoute = () => {
 
 export const RequireRole = ({ role }: { role: string }) => {
   const user = useAppSelector((s) => s.auth.user);
-  return user?.roles.includes(role) ? <Outlet /> : <Navigate to="/" replace />;
+  return user?.roles.includes(role) ? <Outlet /> : <Navigate to="/boards" replace />;
 };

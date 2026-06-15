@@ -52,7 +52,7 @@ export const BoardPage = () => {
   }, [boardId]);
 
   useEffect(() => {
-    reload().catch(() => navigate("/"));
+    reload().catch(() => navigate("/boards"));
   }, [reload, navigate]);
 
   useBoardSocket(boardId, {
@@ -66,7 +66,7 @@ export const BoardPage = () => {
     "member:updated": () => void reload(),
     "member:removed": () => void reload(),
     "board:updated": () => void reload(),
-    "board:deleted": () => navigate("/"),
+    "board:deleted": () => navigate("/boards"),
   });
 
   const sensors = useSensors(

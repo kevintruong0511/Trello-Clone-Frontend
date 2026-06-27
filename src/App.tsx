@@ -11,6 +11,7 @@ import { ProtectedRoute, RequireRole } from "./routes/ProtectedRoute";
 import { bootstrapSession } from "./services/auth";
 
 export const App = () => {
+  // Restore the user session on app mount before rendering routes.
   useEffect(() => {
     void bootstrapSession();
   }, []);

@@ -16,6 +16,7 @@ export const App = () => {
     void bootstrapSession();
   }, []);
 
+  // Top-level route table: public pages, protected app, and admin-only area.
   return (
     <Routes>
       <Route path="/" element={<LandingPage />} />

@@ -31,6 +31,7 @@ export const App = () => {
           </Route>
         </Route>
       </Route>
+      {/* Fallback: any unknown path redirects to the landing page. */}
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
